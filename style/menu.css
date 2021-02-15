@@ -1,0 +1,211 @@
+:root {
+    font-size: 18px;
+    font-family: 'Open Sans';
+    --text-primary: #b6b6b6;
+    --text-secondary: #ececec;
+    --bg-primary: #23232e;
+    --bg-secondary: #141418;
+    --transition-speed: 600ms;
+  }
+  
+  body {
+    color: black;
+    background-color: #E0E0E0;
+    margin: 0;
+    padding: 0;
+  }
+
+  .nbar-top{
+    width:100%;
+    padding-top:2rem;
+    height:5rem;
+    font-size: 2rem;
+    background-image: linear-gradient( to right,	#141418			, 	#23232e		);
+    text-align:right;
+       }
+    .nbar-top a{
+      margin-right: 5rem;
+        font-family: 'Roboto Slab', serif;
+        font-weight: bold;
+        text-decoration: none; color:white;}
+  .nbar {
+    position: fixed;
+    background-color: var(--bg-primary);
+    overflow: hidden;
+    transition: 200ms ease;
+  }
+  
+  .nbar-nav {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+  }
+  
+  .n-item {
+    width: 100%;
+  }
+  
+  .n-item:last-child {
+    margin-top: auto;
+  }
+  
+  .n-link {
+    display: flex;
+    align-items: center;
+    height: 5rem;
+    color: var(--text-primary);
+    text-decoration: none;
+    filter: grayscale(100%) opacity(0.7);
+    transition: 200ms ease;
+  }
+  
+  .n-link:hover {
+    filter: grayscale(0%) opacity(1);
+    background: var(--bg-secondary);
+    color: var(--text-secondary);
+  }
+  
+  .link-text {
+    display: none;
+    margin-left: 1rem;
+  }
+  
+  .n-link i {
+    min-width: 2rem;
+    margin-left: 2rem;
+    transform: scale(2);
+  }
+.logo-text i{transform: scale(1);}
+  
+  .fa-primary {
+    color: #ff7eee;
+  }
+  
+  .fa-secondary {
+    color: #df49a6;
+  }
+  
+  .fa-primary,
+  .fa-secondary {
+    transition: var(--transition-speed);
+  }
+  
+  .logo {
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+    text-align: center;
+    color: var(--text-secondary);
+    background: var(--bg-secondary);
+    font-size: 1.5rem;
+    letter-spacing: 0.3ch;
+    width: 100%;
+  }
+  
+  .logo svg {
+    transform: rotate(0deg);
+    transition: var(--transition-speed);
+  }
+  
+  .logo-text
+  {
+    text-align: right;
+    display: inline;
+    position: absolute;
+    left: -999px;
+    transition: var(--transition-speed);
+  }
+  
+  .nbar:hover .logo svg {
+    transform: rotate(-180deg);
+  }
+
+
+  
+  /* Small screens */
+  @media only screen and (max-width: 600px) {
+    .nbar {
+      bottom: 0;
+      width: 100vw;
+      height: 5rem;
+    }
+  
+    .logo {
+      display: none;
+    }
+  
+    .nbar-nav {
+      flex-direction: row;
+    }
+  
+    .n-link {
+      justify-content: center;
+    }
+  
+    main {
+      margin: 0;
+    }
+  }
+  
+  /* Large screens */
+  @media only screen and (min-width: 600px) {
+    .nbar {
+      top: 0;
+      width: 5rem;
+      height: 100vh;
+    }
+  
+    .nbar:hover {
+      width: 16rem;
+    }
+  
+    .nbar:hover .link-text {
+      display: inline;
+    }
+  
+    .nbar:hover .logo svg
+    {
+      margin-left: 11rem;
+    }
+  
+    .nbar:hover .logo-text
+    {
+      left: 50px;
+    }
+
+  }
+ main
+ { height: 10rem; 
+   display:flex;
+  flex-direction:row;
+  justify-content: center;
+  margin-top: 8px;
+ 
+}
+
+ .card{
+   margin:10px;
+   width:20rem; height:10rem; text-align: center;;
+    border:none;
+    font-family: 'Merriweather', serif;
+    font-family: 'Roboto Condensed', sans-serif;
+    background-color: #E0E0E0;
+  }
+  .card a{text-decoration: none;color:white;
+    font-size:2rem; transition: 300ms ease;}
+  .card-body{border-radius: 20px; padding-top: 3rem;}
+  .card-1{  background-color: rgba(12, 148, 153, 1);}
+  .card-1:hover{  background-color: rgba(12, 148, 153, 0.9);}
+  .card-2{ background-color: rgba(74, 148, 94, 1);}
+  .card-2:hover{ background-color: rgba(74, 148, 94, 0.9);}
+  .card-3{background-color: rgba(203, 212, 47, 1)}
+  .card-3:hover{background-color: rgba(203, 212, 47,0.9)}
+  .card-4{background-color: rgba(128, 31, 31, 1);}
+  .card-4:hover{background-color: rgba(128, 31, 31, 0.9);}
+.card-body:hover a{font-size: 2.3rem;}
+.card:hover{border:#0ff 1px;}
+

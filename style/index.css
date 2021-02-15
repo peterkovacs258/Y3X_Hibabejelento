@@ -1,0 +1,89 @@
+:root {
+    font-size: 20px;
+    --text-primary: #b6b6b6;
+    --text-secondary: #ececec;
+    --bg-primary: #23232e;
+    --bg-secondary: #141418;
+    --transition-speed: 600ms;
+  }
+  html{margin:0; padding:0;}
+  body {
+    font-family: 'Merriweather', serif;
+    font-family: 'Roboto Condensed', sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+
+
+.container{
+width:35%;
+min-width: 550px;
+max-width:1000px;
+padding:0;
+    margin-top:10%;
+    text-align: center;
+}
+.main{ 
+    min-height:250px;
+    border: solid #282828 5px; border-radius: 0 0 5px 5px;
+     padding:15px;
+     overflow:hidden;
+     background-color:#282828;
+     }
+.main input {margin:auto;margin-top: 10px; 
+    border: solid #A0A0A0	 2px; border-radius: 5px;}
+.submit{background-color: white;
+color:#282828;
+width:50%;}
+a{text-decoration: none;color:white}
+.submit:hover
+{background-color:rgba(212, 187, 255, 0.8);
+}
+.navbar-nav
+{
+font-family: 'Roboto Slab', serif;
+font-weight: bold;
+background-color:var(--bg-primary); 
+color:white;
+text-align: center;
+text-transform: uppercase;}
+nav a{
+     width:35%;
+     min-width: 350px;
+      margin:auto;
+}
+nav a:hover{color:rgb(227, 225, 255)}
+.buttons{
+margin:0;
+padding:0;
+overflow: hidden;
+background-color: var(--bg-secondary);
+border-radius: 5px 5px 0 0;
+}
+.btns
+{margin:0;
+    padding:10px;
+    width:50%;
+color:var(--text-primary);
+background-color:var(--bg-secondary);
+float:left;}
+
+.btns:hover
+{
+    color:var(--text-secondary)
+}
+
+/*Registration email submit*/
+.regdiv
+{
+    padding:5px;
+     min-height: 200px;
+text-align: center;
+color:white;
+
+}
+.regdiv .email{width:50%;}
+.regdiv .btn
+{
+margin-top: 20px;
+padding:10px;}

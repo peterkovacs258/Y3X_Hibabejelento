@@ -1,0 +1,38 @@
+<form class="container" method="post" action="#">
+<div class="form-group ">
+    <a href="#" id="goBack"><i class="fas fa-backward"></i></a>
+    <div class="customerInformation">
+    <input type="text" class="" placeholder="Full Name">
+    <input type="text" class="form-controll" placeholder="Email Address"><br>
+    <input type="text" class="form-controll" placeholder="Home Address">
+</div>
+
+    <div class="productInformation">
+        <h3>Product information</h3>
+       <span>Product category</span>
+       <select class="form-controll">
+        <option value="Tv">Television</option>
+        <option value="sWatch">Smart Watch</option>
+        <option value="sPhone">Smart Phone</option>
+        <option value="Tablet">Tablets</option>
+        <option value="Notebook">Notebook</option>
+        <option value="other">Other</option>
+       </select>
+       <input class="form-group" type="text" placeholder="Product Name">
+       <input class="form-group" type="text" placeholder="Warranty Number">
+    </div>
+    <div class="fault">
+        <h3>Please choose a category!</h3>
+        <select class="form-controll">
+            <option value="factoryDef">Factory defective product</option>
+            <option value="humanDef">Defective product due to humman error</option>
+            <option value="mAccessory">Missing accessory</option>
+            <option value="billingError">Billing error</option>
+            <option value="Other">Other</option>
+        </select>
+    </div>
+    
+<input type="submit" class="btn btn-dark" value="Send Request" name="sendRequest"> 
+
+</div>
+</form>
