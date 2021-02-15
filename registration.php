@@ -19,14 +19,15 @@ if($_SERVER['REQUEST_METHOD']=="POST"&&!empty($_POST['cn'])&&!empty($_POST['pw']
 
 $stmt->bind_param("ssss",$fulllName,$email,$password,$passwordR);
     $stmt->execute();
-    Alert("Sikeres regisztráció!");
-    header("Location: index.php");
+    $_SESSION['freshAccount']=true;
+   alertThanMove("Registration succesfull!","index.php");
+  
+
    }
    catch(Exception $ex)
    {
        $ex->getTraceAsString();
    }
-
 }
 ?>
 
@@ -46,7 +47,7 @@ $stmt->bind_param("ssss",$fulllName,$email,$password,$passwordR);
 
 <body>
 <nav class="navbar-nav navbar-expand-lg">
-    <h2>y3x <br> Customer Support</h2>
+    <a href="index.php"><h2>y3x <br> Customer Support</h2></a>
 </nav>
 <div class="container form-group">
 <form action="#" method="post"id="regForm">
