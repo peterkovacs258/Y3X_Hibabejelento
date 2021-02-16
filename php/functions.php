@@ -9,9 +9,7 @@ function validateEmail($email)
      }
 }
 
-function Alert($msg){
-echo'<script type="text/javascript">alert("'.$msg.'")</script>';
-}
+
 function returnLN($fullname)
 {
 
@@ -27,5 +25,17 @@ function returnLN($fullname)
     }
     return $LN;
 }
+
+function alert($message)
+{
+    echo"<script type='text/javascript'>alert(".$message.")</script>";
+}
+
+function alertThanMove($message,$location)
+{
+    echo" <script type='text/javascript'>alert('".$message."');
+    window.location.replace('".$location."');</script>";
+}
+
 
 ?>

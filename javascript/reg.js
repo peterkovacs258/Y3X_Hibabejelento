@@ -62,6 +62,7 @@ if(pwc!=pw)
 
 $("#regForm").submit(function() {											
     if(errorName == false && errorPW==false&&errorPWC==false) {
+
         return true;
                     
     } else {

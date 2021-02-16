@@ -1,0 +1,18 @@
+Index.php
+{
+  1. hibás bejelentkezési adatok során megfelelő hibaüzenet megjelenítés
+  2.Password hash visszafejtése.
+
+}
+menu.php
+{
+    1.menüpontok megfelelő átirányítása
+    2. MakeTicket.php megszerkesztése
+    3.My ticket.php megszerkesztése
+    4. Contact megszerkesztése
+    
+}
+mmenu.js
+{
+  Mytickets.click->>> false válasz esetén megfelelő html kód betöltése
+}

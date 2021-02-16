@@ -1,7 +1,63 @@
-<div class="regdiv">
-<form class="regform "  method="POST">
+<script type="text/javascript">
+    $(document).ready(function(){
+        var regex=/(?:((?:[\w-]+(?:\.[\w-]+)*)@(?:(?:[\w-]+\.)*\w[\w-]{0,66})\.(?:[a-z]{2,6}(?:\.[a-z]{2})?));*)/g;
+      
+      
+    $("#regEmail").on("keyup",function(){
+
+     $("#regButton").prop("disabled",false);
+       $("#regError").html("");
+         let email=$(this).val();
+            if(email.length<1)
+            {
+                $("#regError").html("Please fill me out!");
+            $("#regButton").prop("disabled",true);
+            
+             }
+
+             if(!regex.test(email))
+            { $("#regError").html("Please enter a valid email address!");
+            $("#regButton").prop("disabled",true);
+        } else
+                 $.ajax({
+                        url:"php/emailExists.php",
+                        method:"POST",
+                        data:{email:email},
+                        success:function(response){
+                         if(response==true)
+                         {  $("#regError").html("Email already in use!");  
+                         $("#regButton").prop("disabled",true);
+                         }
+                         
+                        }
+
+                            
+                });    
+
+        });
+       
+        $("#regButton").on("click",function(){
+            let error="";
+         let email=$("#regEmail").val();
+         if(email.length<1)
+         {error="Üres mező!";
+         $("#regButton").prop("disabled",true);
+        }
+        else
+        {}
+         
+         $("#regError").html(error);
+         
+
+        });
+
+        
+    });
+</script>
+<!-- JQUERY Ellenőrzés Vége-->
+<form class="regform2"  method="POST">
 <span >Please enter your email address for a start!</span><br>
-<input name="RegEmail" type="text" class="form-controll email" placeholder="Email"><br>
-<input class="btn btn-light w-50" type="submit" name="regButton" value="Sign me up!">
+<input id="regEmail" name="RegEmail" type="text" class="form-controll email" placeholder="Email"><br>
+<small id="regError"></small><br>
+<input class="btn btn-light w-50" id="regButton" type="submit" name="regButton" value="Sign me up!" >
 </form>
-</div>

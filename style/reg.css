@@ -6,7 +6,7 @@
     --bg-primary: #23232e;
     --bg-secondary: #141418;
     --bg-grey:#282828;
-    --transition-speed: 600ms;
+    --transition-speed: 300ms;
 }
 html{margin:0;padding: 0;}
 body{margin:0;padding:0;}
@@ -54,3 +54,9 @@ font-size: 0.8rem;
 display:none;
 opacity:0.3
 }
+.navbar-nav a
+{text-decoration: none;
+color:white;
+transition: var(--transition-speed),ease;}
+.navbar-nav a:hover
+{color:rgb(227, 225, 255);}

@@ -16,7 +16,7 @@ $res= mysqli_query($connect, $sql);
     {//siker
         $_SESSION['email']=$_POST['email'];
         $_SESSION['name']=$row['UserName'];
-        $_SESSION['id']=$row['UserID'];
+        $_SESSION['userId']=$row['UserID'];
 
         header('Location: menu.php');
     }
@@ -27,6 +27,8 @@ $res= mysqli_query($connect, $sql);
 if($_SERVER["REQUEST_METHOD"]=="POST"&&isset($_POST['regButton']))
 {
     //Email already exists?
+    //Went with jquery/Ajax request instead
+    /*
     $res=mysqli_query($connect,'SELECT * from user WHERE UserEmail="'.$_POST['RegEmail'].'"');
     $row=mysqli_fetch_array($res);
     if(!empty($row))
@@ -38,22 +40,22 @@ if($_SERVER["REQUEST_METHOD"]=="POST"&&isset($_POST['regButton']))
 
     $error=validateEmail($_POST['RegEmail']);
     if(!$error)
-    {$_SESSION['tempEmail']=$_POST['RegEmail'];
+    {
+        */
+        $_SESSION['tempEmail']=$_POST['RegEmail'];
     header("Location: registration.php");
+    /*
     }
     else
     {
       Alert($error);
       
     }
-}
     
 }
-else
-{
-
+*/
+    
 }
-
 
 ?>
 
@@ -84,17 +86,30 @@ else
         <input class="btn btns " id="LoginShow" type="button" value="Log-in">
         <input class="btn btns" id="RegShow" type="button" value="Sign-up">
 </div>   
-        <form id="login-form"  action="" method="post">
+     
 <div  class="main" id="main"> 
-    <input class="form-controll w-50" name="email" type="text" placeholder="Email-cím" ><br>
+<form id="login-form"  action="" method="post">
+
+    <input class="form-controll w-50" id="logemail" name="email" type="text" placeholder="Email-cím" ><br>
     <input class="form-controll w-50" name="password" type="password" placeholder="Jelszó"><br>
     <input class="btn submit " type="submit" name="login" value="Bejelentkezés"><br>
-    <!--
+
+        <?php 
+        {
+            if(!empty($_SESSION['freshAccount']))
+            {
+            echo"<a class='fresh'><span>You can sign in now!</span></a><br>";
+            $_SESSION['freshAccount']=0;
+            }
+        }
+        ?>
+            <!--
     <a href="#" ><span>Regisztráció</span></a><br>
     <a href="#" ><span>Segítség</span></a>
 -->
-</div>
 </form>
+</div>
+
 </div>
 </body>
 

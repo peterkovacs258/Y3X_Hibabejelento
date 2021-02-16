@@ -48,7 +48,7 @@ $ticketnumber=$row['UserTickets'];
   <main class="main">
    
     <div class="card ">
-      <div class="card-body card-1 " id="makeTicket">
+      <div class="card-body card-1 makeTicket">
         <div class="card-title">
         <a href="#" >
         <i class="fas fa-ticket-alt"></i>  
@@ -57,7 +57,7 @@ $ticketnumber=$row['UserTickets'];
       </div>
   </div>
   <div class="card ">
-    <div class="card-body card-2 " id="">
+    <div class="card-body card-2 myTickets " id="">
       <div class="card-title">
         <a href="#"> 
           <i class="fas fa-clipboard-list"></i>
@@ -66,7 +66,7 @@ $ticketnumber=$row['UserTickets'];
     </div>
   </div>    
     <div class="card">
-      <div class="card-body card-3" id="contact">
+      <div class="card-body card-3 contact">
         <div class="card-title">
         <a href="#">
         <i class="fas fa-mail-bulk"></i>
@@ -75,7 +75,7 @@ $ticketnumber=$row['UserTickets'];
   </div>
     </div>  
      
-     <div class="card ">
+     <div class="card myProfile">
       <div class="card-body card-4">
         <div class="card-title">
      <a href="#">
@@ -102,28 +102,28 @@ $ticketnumber=$row['UserTickets'];
         
       </li>
 
-      <li class="n-item .makeTicket" >
+      <li class="n-item makeTicket" >
         <a href="#" class="n-link">
         <i class="fas fa-ticket-alt"></i>   
           <span class="link-text">Make a request</span>
         </a>
       </li>
 
-      <li class="n-item">
+      <li class="n-item myTickets">
         <a href="#" class="n-link">
         <i class="fas fa-clipboard-list"></i>
         <span class="link-text">My tickets</span>
         </a>
       </li>
 
-      <li class="n-item">
+      <li class="n-item myProfile">
         <a href="#" class="n-link">
         <i class="fas fa-id-card-alt"></i>
 <span class="link-text">My profil</span>
         </a>
       </li>
 
-      <li class="n-item">
+      <li class="n-item contact">
         <a href="#" class="n-link">
         <i class="fas fa-hands-helping"></i>
           <span class="link-text">HelpDesk</span>

@@ -74,7 +74,7 @@ float:left;}
 }
 
 /*Registration email submit*/
-.regdiv
+.regform2
 {
     padding:5px;
      min-height: 200px;
@@ -82,8 +82,17 @@ text-align: center;
 color:white;
 
 }
-.regdiv .email{width:50%;}
-.regdiv .btn
+.regform2 .email{width:50%;}
+.regform2 .btn
 {
 margin-top: 20px;
 padding:10px;}
+
+.fresh
+{color:white;
+    font-size: 1rem;
+transition: 500ms ease;}
+.fresh:hover{
+    color:rgb(179, 221, 238);
+    font-size: 1.2rem;
+}
