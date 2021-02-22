@@ -11,7 +11,7 @@ if($_SERVER['REQUEST_METHOD']=="POST"&&!empty($_POST['cn'])&&!empty($_POST['pw']
 {
     $email=$_SESSION['tempEmail'];
     $fulllName=$_POST['cn'];
-    $password=password_hash($_POST['pw'],PASSWORD_DEFAULT);
+    $password=$_POST['pw'];
     $passwordR=$_POST['pwreminder'];
    $sql="INSERT INTO user (UserName,UserEmail,UserPW,PwReminder) VALUES(?,?,?,?)";
    $stmt=$connect->prepare($sql);

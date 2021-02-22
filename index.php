@@ -90,9 +90,9 @@ if($_SERVER["REQUEST_METHOD"]=="POST"&&isset($_POST['regButton']))
 <div  class="main" id="main"> 
 <form id="login-form"  action="" method="post">
 
-    <input class="form-controll w-50" id="logemail" name="email" type="text" placeholder="Email-cím" ><br>
-    <input class="form-controll w-50" name="password" type="password" placeholder="Jelszó"><br>
-    <input class="btn submit " type="submit" name="login" value="Bejelentkezés"><br>
+    <input class="form-controll w-50" id="logemail" name="email" type="text" placeholder="Email address" ><br>
+    <input class="form-controll w-50" name="password" type="password" placeholder="Password"><br>
+    <input class="btn submit " type="submit" name="login" value="Sign-in"><br>
 
         <?php 
         {

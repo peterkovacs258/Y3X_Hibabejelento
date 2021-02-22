@@ -6,13 +6,19 @@ Index.php
 }
 menu.php
 {
-    1.menüpontok megfelelő átirányítása
-    2. MakeTicket.php megszerkesztése
-    3.My ticket.php megszerkesztése
-    4. Contact megszerkesztése
-    
+   // 1.menüpontok megfelelő átirányítása
+   // 2. MakeTicket.php megszerkesztése 
+   // 3.My ticket.php megszerkesztése
+   // 4. Contact megszerkesztése
+
+  02.22
+  1.new_Ticet.php backend 
+  2.My tickets.php backend    (törlés)
+
 }
 mmenu.js
 {
   Mytickets.click->>> false válasz esetén megfelelő html kód betöltése
 }
+
+Height elemek megfelel beállítása

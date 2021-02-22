@@ -15,13 +15,13 @@ $(document).on('click','.contact',function(){
     
 $(document).on('click','.makeTicket',function(){
     $('.main').hide();
-    $('.main').load("html/MakeTicket.html");
+    $('.main').load("html/New_Ticket.php");
     $('.main').show('1000');
 });
 
 $(document).on("click",".myTickets",function(){
  $.ajax({
-    url:"html/userTickets.php",
+    url:"html/User_Tickets.php",
     method:"POST",
     success:function(response)
     {
@@ -42,7 +42,7 @@ $(document).on("click",".myTickets",function(){
  });
 });
 
-$(document).on("click","myProfile",function(){
+$(document).on("click",".myProfile",function(){
 $.ajax({
     url:"html/My_Profile.php",
     method:"POST",
@@ -58,8 +58,10 @@ $.ajax({
             $(".main").html(response);
             $(".main").show("1000");
         }
-    },error:function(){
-
+    },statusCode:{
+        500: function(){
+                        //Adatbázis hiba
+        }
     }
 
     

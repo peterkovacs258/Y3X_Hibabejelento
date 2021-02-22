@@ -37,6 +37,7 @@ $ticketnumber=$row['UserTickets'];
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="javascript/menu.js" ></script>
+<script src="javascript/send_ticket.js" ></script>
 <link href="style/menu.css" rel="stylesheet" type="text/css">
 
 </head>
@@ -46,7 +47,7 @@ $ticketnumber=$row['UserTickets'];
 <a href="menu.php"><span>Y3X CustomerSupport</span></a>
   </nav>
   <main class="main">
-   
+   <div class="row1">
     <div class="card ">
       <div class="card-body card-1 makeTicket">
         <div class="card-title">
@@ -65,6 +66,8 @@ $ticketnumber=$row['UserTickets'];
      </div>
     </div>
   </div>    
+</div>
+<div class="row2">
     <div class="card">
       <div class="card-body card-3 contact">
         <div class="card-title">
@@ -84,6 +87,7 @@ $ticketnumber=$row['UserTickets'];
   </div>
   </div>
     </div>
+</div>
     </main>
 
 
@@ -91,7 +95,7 @@ $ticketnumber=$row['UserTickets'];
   <nav class="nbar">
     <ul class="nbar-nav">
       <li class="logo">
-        <a class="n-link">
+        <a href="#" class="n-link myProfile">
           <span class="link-text logo-text">
           
 <?php echo returnLN($fullname) ?>
@@ -119,7 +123,7 @@ $ticketnumber=$row['UserTickets'];
       <li class="n-item myProfile">
         <a href="#" class="n-link">
         <i class="fas fa-id-card-alt"></i>
-<span class="link-text">My profil</span>
+<span class="link-text">My profile</span>
         </a>
       </li>
 

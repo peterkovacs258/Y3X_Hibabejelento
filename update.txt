@@ -1,2 +1,30 @@
 -My tickets létrehozva,működik, szerkesztésre vár
 -Hibajavítások,elemek megfelelő besorolása
+
+
+
+
+
+class Ticket
+{
+    public $email;
+    public $address;
+    public $pCategory;
+    public $pName;
+    public $wName;
+    public $fCategory;
+    public $ticketMessage;
+
+    public function __construct($email,$address,$pCategory,$pName,$wName,$fCategory,$ticketMessage)
+    {
+        $this->$email=$email;
+        $this->$address=$address;
+        $this->$pCategory=$pCategory;
+        $this->$pName=$pName;
+        $this->$wName=$wName;
+        $this->$fCategory=$fCategory;
+        $this->$ticketMessage=$ticketMessage;
+    }
+    
+
+}

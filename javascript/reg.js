@@ -36,7 +36,7 @@ let pw=$("#pw").val();
 if(pw.length<6)
 {
     
-    $("#pwSmall").html("Password must be more thaan 6 characters");
+    $("#pwSmall").html("Password must be more than 6 characters");
     $("#pwSmall").show().animate({opacity:1},2,function(){});
     errorPW=true;
 }
