@@ -67,17 +67,24 @@ $('.ticketPName').addClass('shakeit');
 //////////////////WARRANTY NUMBER
 $(document).on('focusout','.ticketWNumber',function(){
     $('.ticketWNumber').removeClass('shakeit');
-    if($(this).val()<8||$(this).val>16)
-{
+    if($(this).val()<8||$(this).val>16){
 $('.ticketWNumber').addClass('shakeit');
 }
 });
-$(document).on('click',':input[type="text"]',function(){
-
+$(document).on('click','.ticketMessage,:input[type="text"]',function(){
     $(':input[type="submit"]').prop('disabled', false);
-})
+});
+//////////////Textarea UserMessage
+$(document).on('focusout','.ticketMessage',function(){
+    $('.ticketMessage').removeClass('shakeit');
+    if($(this).val()<5)
+    {    $('.ticketMessage').addClass('shakeit');
+}
+
+});
 
 $(document).on('click',':input[type="submit"]',function(){
+    killButton=false;
     console.log($('.ticketEmail').val());
     var ticket= new Tickets(
     $('.ticketFullName').val(),
@@ -96,7 +103,7 @@ $(document).on('click',':input[type="submit"]',function(){
     if(ticket.pName==""){killButton=true;$('.ticketPName').addClass('shakeit');}
     if(ticket.Wnumber==""){killButton=true;$('.ticketWNumber').addClass('shakeit');}
     if(ticket.messagee==""){killButton=true;$('.ticketMessage').addClass('shakeit');}
-
+    //console.log(ticket.fullname,ticket.email,ticket.hAddress,ticket.pName,ticket.Wnumber,ticket.messagee);
         if(killButton==true)
         {
             $(':input[type="submit"]').prop('disabled', true);

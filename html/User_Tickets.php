@@ -1,7 +1,7 @@
 <?php
 require_once("../php/dbconnection.php");
 session_start();
-if($_SERVER['REQUEST_METHOD']=="POST"&&!empty($_SESSION['userId']))
+if($_SERVER['REQUEST_METHOD']=="POST"||!empty($_SESSION['userId']))
 {
     $id=$_SESSION['userId'];
     $sql="SELECT * from tickets where UserID=".$id;
@@ -11,8 +11,8 @@ if($_SERVER['REQUEST_METHOD']=="POST"&&!empty($_SESSION['userId']))
         echo"false";
     }
     else
-    {
-        $returnHtml="<div class='container containerTicket'>".
+    {   $returnHtml="<script src='javascript/deleteTicket.js'></script>";
+        $returnHtml.="<div class='container containerTicket'>".
         "<div class='goBackMakeTicket'><a href='#' class='goBack'><i class='fas fa-backward'></i></a></div>";
          while($row=$res->fetch_assoc())
         {

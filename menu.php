@@ -22,6 +22,46 @@ $ticketnumber=$row['UserTickets'];
 }
 
 
+//NEW TICKET OOP
+if($_SERVER['REQUEST_METHOD']=="POST"&&
+isset($_POST['ticketFullName'])&&
+isset($_POST['ticketEmail'])&&
+isset($_POST['ticketHaddress'])&&
+isset($_POST['ticketPName'])&&
+isset($_POST['ticketWNumber'])&&
+isset($_POST['ticketMessage']))
+{
+require_once('php/Ticket.php');
+$ticket=new Ticket($_POST['ticketFullName'],$_POST['ticketEmail'],
+$_POST['ticketHaddress'],$_POST['ticketPName'],$_POST['ticketWNumber'],
+$_POST['ticketMessage'],$_POST['ticketPCategory'],$_POST['ticketFCategory']);
+//$ticket->logValues();
+$sql="INSERT INTO tickets (TicketCategory,UserID,Homeaddress,ProductCategory".
+                         " ,ProductName,Warranty,Progress,TicketMessage".
+                      ",TicketUserName,TicketUserEmail) VALUES(?,?,?,?,?,?,?,?,?,?)";
+$stmt=$connect->prepare($sql);
+$requested="requested";
+$stmt->bind_param('sissssssss',$ticket->fcategory,$_SESSION['userId'],
+$ticket->hAddress,
+$ticket->pcategory,
+$ticket->pName,
+$ticket->wNumber,
+$requested,
+$ticket->message,
+$ticket->fullname,
+$ticket->email);
+try
+{$stmt->execute();
+alertThanMove('Ticket was sent!','menu.php');}
+catch(Exception $ex){
+echo $ex->getTraceAsString();
+alert('Something went wrong');
+}
+
+
+}
+
+
 ?>
 
 

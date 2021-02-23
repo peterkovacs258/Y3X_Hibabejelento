@@ -1,30 +1,6 @@
--My tickets létrehozva,működik, szerkesztésre vár
--Hibajavítások,elemek megfelelő besorolása
-
-
-
-
-
-class Ticket
-{
-    public $email;
-    public $address;
-    public $pCategory;
-    public $pName;
-    public $wName;
-    public $fCategory;
-    public $ticketMessage;
-
-    public function __construct($email,$address,$pCategory,$pName,$wName,$fCategory,$ticketMessage)
-    {
-        $this->$email=$email;
-        $this->$address=$address;
-        $this->$pCategory=$pCategory;
-        $this->$pName=$pName;
-        $this->$wName=$wName;
-        $this->$fCategory=$fCategory;
-        $this->$ticketMessage=$ticketMessage;
-    }
-    
-
-}
+--Ticket elküldése szervernek, és tárolása az adatbázison, alert üzenetekkel
+--Hiba kijavítva:
+        Új ticket küldése -> Az oldal most már hibás adatokkal való próbálkozás után, helyes
+        adatok megadása esetén nem tiltja le a submit gombot.
+        
+--Ticket törlése alertekkel

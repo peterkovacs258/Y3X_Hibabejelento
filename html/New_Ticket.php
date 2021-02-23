@@ -1,5 +1,6 @@
 <?php
 session_start();
+
 ?>
 <form class="container" method="post" action="#">
     <div class="goBackMakeTicket">
@@ -28,7 +29,7 @@ session_start();
        </select>
        <span>Product Name</span>
        <input class="form-group form-controll ticketPName" name="ticketPName" type="text">
-       <span>Warranty number</span><input class="form-group ticketWNumber" type="text">
+       <span>Warranty number</span><input name="ticketWNumber" class="form-group ticketWNumber" type="text">
     </div>
 
 </div>
