@@ -20,7 +20,7 @@
     width:100%;
     padding-top:2rem;
     height:5rem;
-    font-size: 2rem;
+    font-size: 1.8rem;
     background-image: linear-gradient( to right,	#141418			, 	#23232e		);
     text-align:right;
        }
@@ -167,7 +167,7 @@
 .container
 {
   padding:3rem;
-    margin:2rem 10% 10% 10%;
+  margin: 2rem 5% 2rem 10%;
     width:100%;
     min-width: 28rem;
     box-shadow:
@@ -177,7 +177,7 @@
     0 22.3px 17.9px rgba(0, 0, 0, 0.072),
     0 41.8px 33.4px rgba(0, 0, 0, 0.086),
     0 100px 80px rgba(0, 0, 0, 0.12);
-    margin-bottom: 10rem;
+    margin-bottom: 10rem !important;
 }
 
 .informationDiv{
@@ -261,14 +261,20 @@ text-align: right;}
 
 /*My TICKETS*/
 .content{
+  font-size: 0.8rem;
   border:2px solid var(--text-primary);
-  margin-bottom: 2rem;
-  padding:2rem;
+
+  padding:1rem;
   background-color: var(--bg-primary);
+  margin:auto;
+  margin-bottom: 2rem;
+  width:70%;
+  
 }
 .content div{display:flex;
  background-color: rgb(43, 41, 53);
-  margin-top: 1rem;
+  margin-top: 0.5rem;
+ padding:0;
   border-bottom: 1px solid white;
   flex-direction: row;
 flex-wrap: none;
@@ -393,15 +399,24 @@ border-radius: 50%;}
   transform: scale(3);
   color:black;
 }
-
-
 /*CONTACT CÉGE*/
+
+/*FOOTER*/
+footer{
+  min-height: 10rem;
+}
 
 @media only screen and (max-width: 1388) {
   .customerInformation
 {margin-right:0;}
 
 }
+/*User Tickets small screen*/
+@media only screen and (max-width: 1000px) {
+  .propertyName
+  {display: none;}
+  .content{width:90%;}
+  }
 
 /* Small screens */
 @media only screen and (max-width: 650px) {

@@ -47,4 +47,6 @@ session_start();
 </div>
 
 
+
 </form>
+<?php echo file_get_contents('footer.html'); ?>
